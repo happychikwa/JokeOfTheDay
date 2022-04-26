@@ -1,30 +1,19 @@
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-// import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from "react-router-dom"
+import MenuItem from "@mui/material/MenuItem"
+import MenuList from "@mui/material/MenuList"
+import Paper from "@mui/material/Paper"
 
 export default function ButtonAppBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            {/* <MenuIcon /> */}
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, margin:'auto' }}>
-            Joke Of The Day
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <Paper>
+      <MenuList
+        id="composition-menu"
+        aria-labelledby="composition-button"
+      >
+        <MenuItem ><Link to="/">Profile</Link></MenuItem>
+        <MenuItem ><Link to="/">My account</Link></MenuItem>
+        <MenuItem ><Link to="/">Logout</Link></MenuItem>
+      </MenuList>
+    </Paper>
   );
 }

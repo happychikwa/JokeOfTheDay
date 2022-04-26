@@ -1,8 +1,8 @@
-import { combineReducers } from '@reduxjs/toolkit'
-import JokeSlice from './JokeSlice'
+import { combineReducers } from "@reduxjs/toolkit";
+import JokeSlice from "./JokeSlice";
 
 const rootReducer = combineReducers({
-    JokeSlice
-})
+  JokeSlice,
+});
 
-export default rootReducer
+export default rootReducer;
